@@ -1,6 +1,6 @@
 import React from "react";
 
-const GuessInput = ({ guess, setGuess, handleGuessAdd }) => {
+const GuessInput = ({ guess, setGuess, handleGuessAdd, disabled }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -18,6 +18,8 @@ const GuessInput = ({ guess, setGuess, handleGuessAdd }) => {
         required
         title="required 5 characters length"
         pattern=".{5}"
+        disabled={disabled}
+        autoFocus
       />
     </form>
   );
